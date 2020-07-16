@@ -1,4 +1,5 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
+![Linters](https://github.com/ioilmio/TwitterClone/workflows/Linters/badge.svg)
 
 # Project Name
 
