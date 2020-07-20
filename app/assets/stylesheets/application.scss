@@ -14,11 +14,12 @@
 //  *= require_self
 //  */
 
-@import "bulma";
+@import 'bulma';
+$color: #fff;
 
 .navbar-brand {
   .title {
-    color: #ffffff;
+    color: $color;
   }
 }
 
@@ -31,7 +32,7 @@
 }
 
 .notification {
-  :not(last-child) {
+  :not(:last-child) {
     margin-bottom: 0;
   }
 }

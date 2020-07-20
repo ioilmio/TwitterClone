@@ -34,20 +34,19 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'rubocop', '~>0.81.0'
 gem 'bootsnap', '>= 1.1.0', require: false
-gem "bulma-rails", "~> 0.9.0"
-gem 'simple_form', '~> 5.0', '>= 5.0.2'
-gem 'gravatar_image_tag', '~> 1.2'
+gem 'bulma-rails', '~> 0.9.0'
 gem 'devise', '~> 4.7', '>= 4.7.2'
+gem 'gravatar_image_tag', '~> 1.2'
+gem 'rubocop', '~>0.81.0'
+gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'pry'
   gem 'better_errors', '~> 2.7', '>= 2.7.1'
-  gem "binding_of_caller"
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'binding_of_caller'
   gem 'guard', '~> 2.16', '>= 2.16.2'
+  gem 'pry'
 end
 
 group :development do
@@ -69,4 +68,4 @@ group :test do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
