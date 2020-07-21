@@ -5,15 +5,15 @@
 			<article class="media">
 				<div class="media-left">
 					<figure class="image is-64x64">
-						<%= gravatar_image_tag(current_user.email, size: 64, alt: current_user.name) %>
+						<%= user_image %>
 					</figure>
 				</div>
 				<div class="media-content">
 					<div class="content">
 						<p>
-							<strong><%= current_user.name %></strong>
+							<strong><%= current_user_name%></strong>
                             <br />
-							<small><%= current_user.username %></small>
+							<small><%= current_user_username %></small>
 						</p>
 					</div>
 				</div>
@@ -24,7 +24,7 @@
 				<div class="level-item has-centered-text">
 					<div>
 						<p class="heading">Tweeets</p>
-						<p class="title is-6"><%= current_user.tweeets.count %></p>
+						<p class="title is-6"><%= tweeets_count %></p>
 					</div>
 				</div>
 				<div class="level-item has-centered-text">
