@@ -3,7 +3,7 @@
     <article class="media box">
       <figure class="media-left">
         <p class="image is-64x64">
-          <%= user_image %>            
+          <%= user_image %>
         </p>
       </figure>
       <div class="media-content">
@@ -16,34 +16,26 @@
       <article class="media">
         <div class="media-left">
           <figure class="image is-64x64">
-            <%= user_image %>       
+            <%= user_image %>
           </figure>
         </div>
-
         <div class="media-content">
           <div class="content">
             <% if user_signed_in? %>
-
-            <strong><%= tweeet.user.try(:name)  %></strong><br />
-            <small><%= tweeet.user.try(:username) %></small><br />
-              <%end%>
-            <p><%= tweeet %></p>
+              <strong><%= tweeet.user.try(:name)  %></strong><br />
+              <small><%= tweeet.user.try(:username) %></small><br />
+            <%end%>
+            <p><%= tweeet.tweeet %></p>
           </div>
-            <% if user_signed_in? %>
-          <nav class="level">
-            <div class="level-left is-mobile">
-              <%= link_to tweeet, class: "level-item" do%>
-                <span class="icon"><i class="fas fa-link" aria-hidden="true"></i></span>
-              <%end%>
-              <%= link_to edit_tweeet_path(tweeet), class: "level-item" do %>
-                <span class="icon"><i class="fas fa-pencil-alt" aria-hidden="true"></i></span>
-              <%end%>
-              <%= link_to tweeet, method: :delete, data: {confirm: "Are you sure you want to delete this tweet?"} do %>
-                <span class="icon"><i class="fas fa-trash" aria-hidden="true"></i></span>
-              <%end%>
-            </div>
-          </nav>
-              <%end%>
+          <% if user_signed_in? %>
+            <nav class="level">
+              <div class="level-left is-mobile">
+                <%= link_to tweeets_path, class: "level-item" do%>
+                  <span class="icon"><i class="fas fa-link" aria-hidden="true"></i></span>
+                <%end%>
+              </div>
+            </nav>
+          <%end%>
         </div>
       </article>
     </div>
