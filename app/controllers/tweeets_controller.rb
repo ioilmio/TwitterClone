@@ -1,6 +1,7 @@
 class TweeetsController < ApplicationController
-  # before_action :set_tweeet, only: %i[show edit update destroy]
   before_action :authenticate_user!, except: %i[index show]
+  before_action :set_tweeet, only: %i[show edit update]
+  before_action :signed_in_only, only: %i[new create edit destroy]
 
   # GET /tweeets
   # GET /tweeets.json
@@ -62,6 +63,10 @@ class TweeetsController < ApplicationController
   end
 
   private
+
+  def signed_in_only
+    redirect_to new_user_session_path unless current_user
+  end
 
   # Use callbacks to share common setup or constraints between actions.
   def set_tweeet

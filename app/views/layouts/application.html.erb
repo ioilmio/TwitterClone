@@ -37,7 +37,6 @@
           <p class="control">
 							<%= link_to 'New Tweeet', root_path, class: "button is-info is-inverted" %>
 						</p>
-            <%# <div class="control"> %>
                 <% if user_signed_in? %>
                   <p class="control">
                     <%= link_to current_user.username, edit_user_registration_path, class: "button is-info" %>
@@ -53,7 +52,6 @@
                     <%= link_to 'Sign Up', new_user_registration_path, class: "button is-info" %>
                   </p>
                 <% end %>
-              <%# </div> %>
             </div>
           </div>
         </div>
