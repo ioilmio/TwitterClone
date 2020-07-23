@@ -32,7 +32,6 @@
 
 [Live Demo Link](https://livedemo.com)
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ### Prerequisites
 
