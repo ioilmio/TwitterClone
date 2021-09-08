@@ -43,7 +43,7 @@ gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'better_errors', '~> 2.7', '>= 2.7.1'
+  gem 'better_errors', '~> 2.8'
   gem 'binding_of_caller'
   gem 'guard', '~> 2.16', '>= 2.16.2'
   gem 'pry'
